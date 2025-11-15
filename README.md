@@ -105,4 +105,4 @@ The report is powered by a robust set of DAX measures, including:
 I am passionate about leveraging data to build insightful solutions. Let's connect!
 
 * **LinkedIn:** [https://www.linkedin.com/in/engy-saeed2003/](https://www.linkedin.com/in/engy-saeed2003/)
-* **Email:** [engysead498@gmail.com](engysead498@gmail.com)
+* **Email:** engysead498@gmail.com
