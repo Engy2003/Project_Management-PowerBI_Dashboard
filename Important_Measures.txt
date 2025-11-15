@@ -1,0 +1,100 @@
+Total Tasks = COUNTROWS('Dataset')
+
+_______________________________________________________________________________
+
+% Completed = 
+    DIVIDE(
+        CALCULATE([Total Tasks],'Dataset'[Comments] = "No Issues"),
+        [Total Tasks])
+
+_______________________________________________________________________________
+
+R % Completed = 1.0 - [% Completed]
+
+_______________________________________________________________________________
+
+% In progress = 
+    DIVIDE(
+        CALCULATE([Total Tasks],'Dataset'[Comments] = "In progress"),
+        [Total Tasks])
+
+_______________________________________________________________________________
+
+R % In progress = 1.0 - [% In progress]
+
+_______________________________________________________________________________
+
+% Not started = 
+    DIVIDE(
+        CALCULATE([Total Tasks],'Dataset'[Comments] = "Not started"),
+        [Total Tasks])
+
+_______________________________________________________________________________
+
+R % Not started = 1.0 - [% Not started]
+
+_______________________________________________________________________________
+
+Total Completed Tasks = CALCULATE([Total Tasks],'Dataset'[Task Status]= "Completed")
+
+_______________________________________________________________________________
+
+Total InProgress Tasks = CALCULATE([Total Tasks],'Dataset'[Task Status]= "In Progress")
+
+_______________________________________________________________________________
+
+Total Blocked Tasks = CALCULATE([Total Tasks],'Dataset'[Task Status]= "Blocked")
+
+_______________________________________________________________________________
+
+Total NotStarted Tasks = CALCULATE([Total Tasks],'Dataset'[Task Status]= "Not Started")
+
+_______________________________________________________________________________
+
+Total Budget = SUM('Dataset'[Budget Amount ($)])
+
+_______________________________________________________________________________
+
+Amount Spent = SUM('Dataset'[Amount Spent ($)])
+
+_______________________________________________________________________________
+
+Balance = [Total Budget] - [Amount Spent]
+
+_______________________________________________________________________________
+
+Budget Utilization % = 
+    DIVIDE([Amount Spent], [Total Budget], 0)
+
+_______________________________________________________________________________
+
+CF Budget = 
+    IF([Budget Utilization %]>0.5,0,1)
+I used this (if we spend more than half, its color will be light red, and if we spend less than half, its color will be green)
+_______________________________________________________________________________
+
+% Remaining Budget = 1.0 - [Budget Utilization %]
+
+_______________________________________________________________________________
+
+Title = IF([% Remaining Budget]<0, "Above Budget", "Remaining Budget")
+
+_______________________________________________________________________________
+
+CF Remaining Budget = 
+    IF([% Remaining Budget]<0 ,0 ,
+        IF([% Remaining Budget]<0.3,1,2)
+    )
+I used this (if the remaining budget is less than 0 it will be red, if the remaining budget is less than 30% it will be light red, and if the remaining budget is more than 30% it will be green)
+_______________________________________________________________________________
+
+New Calculation to a visual (table) then I made it Area chart:
+table in Budget Page
+Cumulative Budget = RUNNINGSUM([Total Budget])
+Cumulative Amount Spent = RUNNINGSUM([Amount Spent])
+
+_______________________________________________________________________________
+
+CF Balance = 
+    IF([Balance]>0,1,0)
+I used this (if Balance is less than half, its color will be red, and if Balance is more than half, its color will be green)
