@@ -77,13 +77,13 @@ The report is powered by a robust set of DAX measures, including:
 * **Conditional Formatting (CF):** Several measures (`CF Budget`, `CF Remaining Budget`, `CF Balance`) were created using `IF` logic to dynamically color visuals based on performance thresholds (e.g., highlighting red if spending exceeds 50% or if the balance is negative).
 
 ## 📂 Repository Structure
-├── Icons/ # All icons used in the dashboard UI 
-├── Images/ # Screenshots and visuals of the dashboard 
-├── ProjectManagementDataset/ │ ├── ProjectManagementDataset.xlsx # The raw data source │ ├── Gantt 2.2.3.0.pbiviz # The custom Gantt chart visual 
-├── important columns.txt # DAX code for the 'Expected Days' calculated column 
-├── important measures.txt # DAX code for all measures used in the report 
-├── important tables.txt # DAX code for the 'Calendar' table 
-├── ProjectManagement_Report.pbix # The main Power BI project file └── README.md # This file
+-    ├── Icons/ # All icons used in the dashboard UI 
+-    ├── Images/ # Screenshots and visuals of the dashboard 
+-    ├── ProjectManagementDataset/ │ ├── ProjectManagementDataset.xlsx # The raw data source │ ├── Gantt 2.2.3.0.pbiviz # The custom Gantt chart visual 
+-    ├── important columns.txt # DAX code for the 'Expected Days' calculated column 
+-    ├── important measures.txt # DAX code for all measures used in the report 
+-    ├── important tables.txt # DAX code for the 'Calendar' table 
+-    ├── ProjectManagement_Report.pbix # The main Power BI project file └── README.md # This file
 
 ## 🚀 How to Use
 
@@ -104,5 +104,5 @@ The report is powered by a robust set of DAX measures, including:
 
 I am passionate about leveraging data to build insightful solutions. Let's connect!
 
-* **LinkedIn:** `https://www.linkedin.com/in/engy-saeed2003/`
-* **Email:** `engysead498@gmail.com`
+* **LinkedIn:** [https://www.linkedin.com/in/engy-saeed2003/](https://www.linkedin.com/in/engy-saeed2003/)
+* **Email:** [engysead498@gmail.com](engysead498@gmail.com)
