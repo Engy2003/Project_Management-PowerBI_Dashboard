@@ -1,6 +1,6 @@
 # Project Management Power BI Dashboard
 
-![Dashboard Screenshot]()
+![Dashboard Screenshot](https://github.com/Engy2003/Project_Management-PowerBI_Dashboard/blob/main/Images/Project%20Details.png)
 
 This repository contains the complete Power BI project for a comprehensive Project Management Dashboard. This solution is designed to provide a 360-degree view of project performance, enabling project managers, stakeholders, and teams to track tasks, monitor timelines, and manage budgets effectively.
 
