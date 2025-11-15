@@ -1,0 +1,6 @@
+Expected Days = 
+    DATEDIFF(
+        'Dataset'[Start Date],
+        'Dataset'[Due Date],
+        DAY
+    )
